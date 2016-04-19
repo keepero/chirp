@@ -11,7 +11,7 @@ function isAuthenticated (req, res, next) {
 	if(req.method === "GET"){
 		return next();
 	}
-	if (req.isAuthenticated()){
+	if (!req.isAuthenticated()){
 		return next();
 	}
 
